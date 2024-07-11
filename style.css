@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: max-content;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  font-family: "Inconsolata", monospace;
+}
+
+.draggable-elements {
+  width: 70%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.draggable-elements i {
+  font-size: 38px;
+  cursor: move;
+  opacity: 1;
+}
+
+.draggable-elements img,
+.box-dropable-area img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.draggable-elements img {
+  cursor: move;
+  opacity: 1;
+}
+
+.draggable-elements img.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transition: opacity 0.3s linear;
+}
+
+.dropable-elements {
+  width: 50%;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropable-box {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropable-elements .box-dropable-area {
+  width: 74px;
+  height: 74px;
+  border-radius: 18px;
+  border: 2px dashed black;
+  scale: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.box-dropable-area.drop-hover {
+  scale: 1.1;
+  transition: scale 0.3s linear;
+}
+
+.box-dropable-area.dropped {
+  border-style: solid;
+}
